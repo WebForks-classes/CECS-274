@@ -1,0 +1,5 @@
+turn right on west street
+turn left on east street
+turn right on south street
+turn right on east street
+turn right on north street

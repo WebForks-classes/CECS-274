@@ -1,9 +1,9 @@
 def sortByLengthLines(originalFile, destinationFile):
-
+    
     ogfile = open(originalFile, 'r')
     lines = ogfile.readlines()
     list = lines
-    print(lines)
+
 
     n = len(list)
     swapped = False
@@ -15,7 +15,6 @@ def sortByLengthLines(originalFile, destinationFile):
                 list[j], list[j+1] = list[j+1], list[j]
         if not swapped:
             return
-    print(list)
 
     dstfile = open(destinationFile, 'w')
     for item in list:

@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 def reverse(originalFile, destinationFile):
     #opens the original file and turns lines in original file into a list
     ogfile = open(originalFile, 'r')
@@ -18,3 +20,4 @@ def reverse(originalFile, destinationFile):
     ogfile.close()
 
 reverse("originalFile.txt", "destinationFile.txt")
+print("Process finished --- %s seconds ---" % (time.time() - start_time))

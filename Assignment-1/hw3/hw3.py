@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 def sortByLengthLines(originalFile, destinationFile):
     
     ogfile = open(originalFile, 'r')
@@ -23,3 +25,4 @@ def sortByLengthLines(originalFile, destinationFile):
     dstfile.close()
     ogfile.close()
 sortByLengthLines('originalFile.txt', 'destinationFile.txt')
+print("Process finished --- %s seconds ---" % (time.time() - start_time))

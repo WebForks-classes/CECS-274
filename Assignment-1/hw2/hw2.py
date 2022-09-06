@@ -1,3 +1,5 @@
+import time
+start_time = time.time()
 def removeDuplication(originalFile, destinationFile):
 
     #opens file and appends to list
@@ -29,3 +31,4 @@ def removeDuplication(originalFile, destinationFile):
 
 
 removeDuplication("originalFile.txt", "destinationFile.txt")
+print("Process finished --- %s seconds ---" % (time.time() - start_time))

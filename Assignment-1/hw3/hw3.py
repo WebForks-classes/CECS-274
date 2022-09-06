@@ -1,12 +1,14 @@
 import time
 start_time = time.time()
+
 def sortByLengthLines(originalFile, destinationFile):
     
+    #opens files
     ogfile = open(originalFile, 'r')
     lines = ogfile.readlines()
     list = lines
 
-
+    #bubble sort
     n = len(list)
     swapped = False
 
@@ -18,11 +20,14 @@ def sortByLengthLines(originalFile, destinationFile):
         if not swapped:
             return
 
+    #writes list to destination file
     dstfile = open(destinationFile, 'w')
     for item in list:
         dstfile.write(item)  
-  
+
+    #closes files
     dstfile.close()
     ogfile.close()
+
 sortByLengthLines('originalFile.txt', 'destinationFile.txt')
 print("Process finished --- %s seconds ---" % (time.time() - start_time))

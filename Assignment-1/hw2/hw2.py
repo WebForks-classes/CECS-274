@@ -1,34 +1,15 @@
-import time
-start_time = time.time()
 def removeDuplication(originalFile, destinationFile):
-
-    #opens file and appends to list
+    a = 1
+    list = {}
     ogfile = open(originalFile, 'r')
-    lines = ogfile.readlines()
+    for lines in ogfile:
+        list[lines] = a
+        a = a + 1
+    ogfile.close()
 
-    #creates list
-    list = []
-    a = 0
-    i = lines[a]
 
-    #removes duplicate or adds to list
-    for i in lines:
-        if i in list:
-            lines.remove(i)
-            a += 1
-        else:
-            list.append(i)
-            a += 1
-
-    #opens destination file and writes list to it
     dstfile = open(destinationFile, 'w')
     for item in list:
         dstfile.write(item)
 
-    #closes files
-    dstfile.close()
-    ogfile.close()
-
-
 removeDuplication("originalFile.txt", "destinationFile.txt")
-print("Process finished --- %s seconds ---" % (time.time() - start_time))

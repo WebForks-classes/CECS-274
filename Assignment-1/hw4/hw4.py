@@ -1,24 +1,27 @@
 import numpy
 import array
 
-# HW1
-def reverse(originalFile, destinationFile):
-    #opens the original file and turns lines in original file into a list
+
+#q1 using list interface
+
+#q2 using USet interface 26275
+def removeDuplication(originalFile, destinationFile):
     ogfile = open(originalFile, 'r')
     lines = ogfile.readlines()
 
-    #creates a new list and reverses the order of the lines in the original file
-    arrays = array.array()
-    while len(lines) > 0:
-        list.append(lines.pop())
+    ogset = set()
+    a = 0
+    i = lines[a]
 
-    #opens the destination file and writes the reversed lines to the destination file
+    for i in lines:
+        ogset.add(i)
+        a += 1
+    
     dstfile = open(destinationFile, 'w')
-    for item in list:
+    for item in ogset:
         dstfile.write(item)
-
-    #closes the files   
+    
     dstfile.close()
     ogfile.close()
 
-reverse("originalFile.txt", "destinationFile.txt")  
+removeDuplication("originalFileQ2.txt", "destinationFileQ2.txt")
